@@ -18,11 +18,12 @@ header {
   color: white;
   text-align: center;
 }
+
 h1 {
   margin: 0;
   padding: 30px 0;
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: .9em;
 }
 
 /**********************
@@ -37,12 +38,12 @@ h1 {
 h2 {
   margin: 0;
   padding-top: 30px;
-  font-size: 1em;
+  font-size: .8em;
   color: black;
 }
 
 .subheader p {
-  font-size: .8em;
+  font-size: .6em;
   margin-bottom: 4px;
   padding-bottom: 40px;
   border-bottom: 7px solid black;
@@ -65,7 +66,7 @@ fieldset {
 legend {
   position: absolute;
   font-weight: bold;
-  font-size: 1em;
+  font-size: .7em;
   color: black;
 }
 
@@ -74,7 +75,7 @@ legend {
 select,
 textarea {
   display: block;
-  font-size: .8em;
+  font-size: .6em;
 }
 
 .info label {
@@ -85,11 +86,12 @@ textarea {
 select,
 textarea {
   width: 100%;
-  margin: 20px 0 10px;
+  margin: 20px 5px 10px;
   padding: 15px 10px;
+  border: none;
   background-color: #DCDCDC;
-  border: 3px solid #DCDCDC;
   border-radius: 7px;
+  -webkit-transition: background-color 3s;
 }
 
 .info input {
@@ -101,46 +103,107 @@ textarea {
 select:focus,
 textarea:focus {
   outline: none;
-  border-color: gray;
+  border: 3px solid gray;
   text-align: left;
   font-style: normal;
+  background-color: white;
+  color: black;
 }
 
 #zipcode {
   width: 60%;
 }
 
-.first {
+Label.first,
+p.first {
   margin-top: 50px;
 }
 
 .news p {
-  font-size: .7em;
+  font-size: .6em;
   margin-bottom: 10px;
 }
 
 .news label {
-  font-size: .7em;
+  font-size: .6em;
   display: inline-block;
-  margin: 10px;
+  margin: 7px;
 }
 
-input[type="submit"] {
+.news label.first {
+  margin: 25px 0 5px;
+}
+
+input[type="button"] {
   display: block;
   width: 100%;
   font-weight: bold;
   margin: 40px 0 10px;
   padding: 15px 10px;
-  background-color: #00BFFF;
+  background-color: #9AA7C6;
   color: white;
-  border: 3px solid #00BFFF;
   border-radius: 7px;
 }
 
+input[type="button"]:focus {
+  outline: none;
+}
+
+/**********************
+    Footer CSS rules
+ **********************/
+footer {
+  background-color: #CEDBFB;
+  color: dimgray;
+  padding: 20px 0;
+}
 footer p {
-  font-size: .8em;
+  font-size: .6em;
   font-style: italic;
   font-weight: bold;
   margin: 0;
   padding: 5px 50px;
+}
+
+/*****************************
+    Media queries CSS rules
+ *****************************/
+@media only screen and (min-width:768px) {
+  body {
+    font-size: 32px;
+    background: url("../images/background.jpg");
+  }
+
+  main {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #fefefe;
+    padding: 20px;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .container label {
+    width: 25%;
+    margin-top: 30px;
+  }
+
+  .container input,
+  .container select {
+    width: 75%;
+  }
+
+  .container.first {
+    margin-top: 50px;
+  }
+
+  #zipcode {
+    width: 30%;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
