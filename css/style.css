@@ -91,7 +91,7 @@ textarea {
   border: none;
   background-color: #DCDCDC;
   border-radius: 7px;
-  -webkit-transition: background-color 3s;
+  transition: background-color 3s;
 }
 
 .info input {
@@ -134,7 +134,7 @@ p.first {
   margin: 25px 0 5px;
 }
 
-input[type="button"] {
+input[type="submit"] {
   display: block;
   width: 100%;
   font-weight: bold;
@@ -145,7 +145,7 @@ input[type="button"] {
   border-radius: 7px;
 }
 
-input[type="button"]:focus {
+input[type="submit"]:focus {
   outline: none;
 }
 
